@@ -1,0 +1,16 @@
+{
+	"editor.formatOnSave": true,
+	"prettier.tabWidth": 2,
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "all",
+	"prettier.semi": true,
+	"prettier.jsxBracketSameLine": true,
+	"prettier.printWidth": 100,
+	"emmet.triggerExpansionOnTab": true,
+	"prettier.jsxSingleQuote": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"prettier.enableDebugLogs": true
+}
