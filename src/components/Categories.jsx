@@ -1,8 +1,7 @@
-import { logDOM } from '@testing-library/react';
 import React from 'react';
 
 const Categories = (props) => {
-	const { items, onItemClick } = props;
+	const { items } = props;
 	const [activeItem, setActiveItem] = React.useState(0);
 
 	const onSelectItem = (index) => {
