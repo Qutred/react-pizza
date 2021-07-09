@@ -10,7 +10,6 @@ body {
 
 .wrapper {
   width: calc(100vw - 100px);
-  height: 100%;
   background-color: #fff;
   margin: 0 auto;
   border-radius: 10px;
@@ -25,9 +24,12 @@ body {
   }
 
   &__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 267px));
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px 5%;
   }
 
   &__top {
