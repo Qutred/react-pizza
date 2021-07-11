@@ -1,9 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import { Categories, SortPopup, PizzaBlock } from '../components/';
 
 const Home = (props) => {
-	const { items } = props;
+	const { items, filters } = useSelector(({ pizzas, filters }) => {
+		return {
+			items: pizzas.items,
+			filters,
+		};
+	});
 	return (
 		<div className='container'>
 			<div className='content__top'>
