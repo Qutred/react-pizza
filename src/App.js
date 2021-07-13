@@ -12,8 +12,8 @@ function App() {
 	const dispatch = useDispatch();
 
 	React.useEffect(() => {
-		axios.get('http://localhost:3000/db.json').then(({ data }) => {
-			dispatch(setPizzasAction(data.pizzas));
+		axios.get('http://localhost:3001/pizzas').then(({ data }) => {
+			dispatch(setPizzasAction(data));
 		});
 	}, []);
 
@@ -30,44 +30,4 @@ function App() {
 	);
 }
 
-// class App extends React.Component {
-// 	componentDidMount() {
-// 		axios.get('http://localhost:3000/db.json').then(({ data }) => {
-// 			this.props.setPizzas(data.pizzas);
-// 		});
-// 	}
-// 	render() {
-// 		console.log(this.props);
-// 		return (
-// 			<div className='wrapper'>
-// 				<Header />
-// 				<div className='content'>
-// 					<Switch>
-// 						<Route
-// 							exact
-// 							path='/'
-// 							render={() => {
-// 								return <Home items={this.props.items} />;
-// 							}}
-// 						/>
-// 						<Route path='/cart' component={Cart} />
-// 					</Switch>
-// 				</div>
-// 			</div>
-// 		);
-// 	}
-// }
-
-// const mapStateToProps = (state) => {
-// 	return {
-// 		items: state.pizzas.items,
-// 		filter: state.filters,
-// 	};
-// };
-
-// const mapDispatchToProps = (dispatch) => {
-// 	return {
-// 		setPizzas: (items) => dispatch(setPizzasAction(items)),
-// 	};
-// };
 export default App;
